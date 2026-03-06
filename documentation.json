@@ -51,6 +51,17 @@
                 "icon": "plug"
               }
             ]
+          },
+          {
+            "group": "Legal",
+            "icon": "shield",
+            "pages": [
+              {
+                "title": "Privacy Policy",
+                "path": "privacy-policy",
+                "icon": "lock"
+              }
+            ]
           }
         ]
       },
