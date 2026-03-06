@@ -1,0 +1,172 @@
+---
+title: Getting Started with LinkSpot
+description: Set up your LinkSpot account and create your first documentation space in just a few minutes.
+---
+
+## Prerequisites
+
+<Callout kind="info" title="Before You Begin">
+Ensure you have:
+- A valid email address
+- Team member emails ready for invitations
+- Existing docs (Markdown, Google Docs, or GitHub repo) if importing
+</Callout>
+
+LinkSpot makes it easy to set up your documentation workspace. Follow these steps to create your account, invite collaborators, build your first page, explore the dashboard, and import content.
+
+## Step 1: Create Your Account
+
+<Steps>
+  <Step title="Sign Up" icon="user-plus">
+    Visit `https://app.linkspot.com/signup` and enter your email and password.
+
+    Choose your workspace name, such as "My Project Docs".
+
+    Verify your email by clicking the link sent to your inbox.
+  </Step>
+
+  <Step title="Complete Onboarding" icon="check-circle">
+    Select your team size and preferred doc formats (Markdown, rich text).
+
+    Skip advanced settings for now—you can configure them later.
+  </Step>
+</Steps>
+
+## Step 2: Invite Team Members
+
+<Steps>
+  <Step title="Access Invites" icon="users">
+    From the dashboard, click the `Team` icon in the sidebar.
+  </Step>
+
+  <Step title="Send Invites" icon="mail">
+    Enter email addresses separated by commas: `team@example.com, collab@company.com`.
+
+    Set roles: `Editor` for full access or `Viewer` for read-only.
+  </Step>
+
+  <Step title="Manage Permissions" icon="shield">
+    Team members receive an invite link—approve pending requests from your `Team` settings.
+  </Step>
+</Steps>
+
+## Build Your First Documentation Page
+
+Start creating content immediately.
+
+<Tabs>
+  <Tab title="Rich Text Editor" icon="edit-3">
+    Click `New Page` in the dashboard.
+
+    Use the visual editor for headings, lists, and embeds.
+
+    ```
+    ## Welcome to LinkSpot
+
+    This is your first page.
+
+    - Add lists
+    - Embed images
+    ```
+  </Tab>
+
+  <Tab title="Markdown Mode" icon="code">
+    Switch to Markdown view for faster editing.
+
+````markdown
+## Welcome to LinkSpot
+
+This is your first page.
+
+- Add lists
+- Embed images
+````
+
+  </Tab>
+</Tabs>
+
+<Callout kind="tip">
+Save frequently—LinkSpot auto-saves every 30 seconds.
+</Callout>
+
+## Navigate the Dashboard
+
+<Columns cols={3}>
+  <Card title="Spaces" icon="folder" href="#">
+    Manage multiple documentation spaces.
+  </Card>
+
+  <Card title="Search" icon="search" href="#">
+    Full-text search across all pages.
+  </Card>
+
+  <Card title="Analytics" icon="bar-chart-3" href="#">
+    Track page views and edits.
+  </Card>
+</Columns>
+
+Key areas include:
+- **Sidebar**: Access spaces, pages, and settings.
+- **Top Bar**: Search and user profile.
+- **Page List**: Hierarchical view of your docs.
+
+## Import Existing Documentation
+
+Bring in your current docs seamlessly.
+
+<CodeGroup tabs="Markdown,Google Docs,GitHub">
+````markdown
+```bash
+# Upload Markdown files directly
+curl -X POST https://api.linkspot.com/v1/import/markdown \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -F "file=@docs.md"
+```
+````
+
+````markdown
+```javascript
+// Google Docs integration
+import { linkspot } from 'linkspot-sdk';
+
+const importer = linkspot.import();
+await importer.fromGoogleDocs({
+  docId: '1abc123',
+  spaceId: 'your-space-id'
+});
+```
+````
+
+````markdown
+```bash
+# Sync from GitHub repo
+# In dashboard: Integrations > GitHub > Connect repo
+# Select branch: main
+# Import path: /docs/*
+```
+````
+</CodeGroup>
+
+## Next Steps
+
+<Expandable title="Advanced Features" default-open="false">
+Explore these after setup:
+
+- Custom domains for public docs
+- Version history and rollback
+- Webhooks for integrations
+</Expandable>
+
+<Columns cols={2}>
+  <Card title="Authentication" icon="lock" href="/authentication">
+    Secure your workspace with SSO.
+  </Card>
+
+  <Card title="Customization" icon="settings" href="/configuration">
+    Tailor LinkSpot to your workflow.
+  </Card>
+</Columns>
+
+<Callout kind="success">
+Congratulations! Your LinkSpot workspace is ready. Start building and share your first page with your team.
+</Callout>

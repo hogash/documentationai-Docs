@@ -1,0 +1,162 @@
+---
+title: Core Features of LinkSpot
+description: Explore the essential tools and capabilities that make LinkSpot ideal for documentation management.
+---
+
+## Overview
+
+LinkSpot provides a comprehensive suite of tools for managing your project documentation. You create, collaborate, track changes, organize content, and export it seamlessly. These features streamline your workflow from initial draft to final distribution.
+
+<Callout kind="info">
+LinkSpot supports both visual editing and markdown-based workflows, making it accessible for all team members.
+</Callout>
+
+## Features at a Glance
+
+<Columns cols={3}>
+  <Card title="Page Creation" icon="file-plus" href="#creating-pages">
+    Build new documentation pages quickly with intuitive editors.
+  </Card>
+  <Card title="Version Control" icon="git-branch" href="#version-control">
+    Track changes and revert to previous versions effortlessly.
+  </Card>
+  <Card title="Team Collaboration" icon="users" href="#collaboration">
+    Invite teammates and review changes in real-time.
+  </Card>
+  <Card title="Search & Organization" icon="search" href="#search">
+    Find and structure content with powerful tools.
+  </Card>
+  <Card title="Export Options" icon="download" href="#export">
+    Generate PDFs, HTML, or markdown exports.
+  </Card>
+</Columns>
+
+## Creating and Editing Documentation Pages
+
+Start by navigating to your workspace dashboard at `https://dashboard.linkspot.com`. Click the "New Page" button to begin.
+
+<Tabs>
+  <Tab title="Visual Editor" icon="edit-3">
+    Drag and drop blocks for headings, images, and code snippets. No coding required.
+  </Tab>
+  <Tab title="Markdown Editor" icon="code">
+    Write in standard markdown with live preview.
+
+````markdown
+# My Document Title
+
+## Section Heading
+
+This is a **bold** paragraph with a [link](/path).
+
+```javascript
+console.log("Hello, LinkSpot!");
+```
+````
+  </Tab>
+</Tabs>
+
+<Steps>
+  <Step title="Create Page" icon="plus">
+    Select your workspace and click "New Page".
+  </Step>
+  <Step title="Edit Content">
+    Choose visual or markdown mode and add your content.
+  </Step>
+  <Step title="Preview & Publish" icon="eye">
+    Preview changes then hit "Publish".
+  </Step>
+</Steps>
+
+## Version Control and History Tracking
+
+LinkSpot automatically saves every change, creating a full version history. Access it via the page menu.
+
+<Expandable title="View Change History" default-open="true">
+  Click the history icon to see diffs between versions. Revert by selecting a previous snapshot.
+
+  ```mermaid
+  graph TD
+      A[Draft v1] --> B[Edit v2]
+      B --> C[Review v3]
+      C --> D[Published v4]
+      D --> E[Revert to v2]
+  ```
+</Expandable>
+
+## Collaboration Tools for Teams
+
+Invite team members by email or link. They can comment, suggest edits, and @mention others.
+
+<Tabs>
+  <Tab title="Invite Collaborators" icon="user-plus">
+    Go to page settings > Sharing > Add members.
+  </Tab>
+  <Tab title="Review Changes">
+    Use inline comments and approval workflows.
+  </Tab>
+</Tabs>
+
+<Callout kind="tip">
+Enable real-time cursors to see who is editing simultaneously.
+</Callout>
+
+## Search and Organization Features
+
+Powerful full-text search indexes all pages. Organize with tags, folders, and custom hierarchies.
+
+| Feature | Description | Example Use |
+|---------|-------------|-------------|
+| Global Search | Finds across all pages | Type "API endpoint" |
+| Tags | Categorize content | #feature #bugfix |
+| Folders | Nested organization | docs/guides/ |
+| Filters | Narrow by date/author | Last 7 days |
+
+## Export Options for Docs
+
+Export single pages or entire sites in multiple formats.
+
+<CodeGroup tabs="PDF,HTML,Markdown">
+````bash
+# CLI export example
+linkspot export --page=my-page --format=pdf --output=./docs.pdf
+````
+````html
+<!-- HTML structure -->
+<!DOCTYPE html>
+<html>
+<head><title>My Page</title></head>
+<body><!-- Content --></body>
+</html>
+````
+````markdown
+# Exported Page
+
+Content from LinkSpot.
+````
+</CodeGroup>
+
+<Steps>
+  <Step title="Select Export" icon="download">
+    Open page menu > Export.
+  </Step>
+  <Step title="Choose Format">
+    Pick PDF, HTML, or Markdown.
+  </Step>
+  <Step title="Download" icon="save">
+    Generate and save the file.
+  </Step>
+</Steps>
+
+## Next Steps
+
+Explore these features hands-on in your LinkSpot workspace. For API integrations, check endpoints like `https://api.example.com/v1/pages`.
+
+<Columns cols={2}>
+  <Card title="Quickstart Guide" icon="book-open" href="/quickstart">
+    Set up your first project.
+  </Card>
+  <Card title="API Reference" icon="api" href="/authentication">
+    Programmatic access.
+  </Card>
+</Columns>
