@@ -121,5 +121,8 @@
         ]
       }
     ]
+  },
+  "seo": {
+    "llms-txt:enabled": true
   }
 }
