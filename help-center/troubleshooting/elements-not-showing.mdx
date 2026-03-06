@@ -1,0 +1,66 @@
+---
+title: Elements Not Showing on Storefront
+description: Troubleshoot why Pins, Product Sets, Annotations, or Captions aren't appearing on your product pages.
+---
+
+## Symptoms
+
+- Pins, Annotations, or Captions don't appear on product images
+- Product Sets are missing from product pages
+- Elements were working before but stopped appearing
+
+## Solutions
+
+<Steps>
+  <Step title="Check the App Embed Block">
+    The most common cause is the app embed block not being enabled.
+
+    1. Open the LinkSpot dashboard
+    2. Check the integration status -- it should show "Enabled"
+    3. If it shows "Not enabled", click **Enable app embed** and save in the theme editor
+
+If you recently switched themes, the app embed block needs to be enabled again on the new theme.
+  </Step>
+
+  <Step title="Run the Compatibility Test">
+    Your theme may not be compatible, or compatibility data may be outdated.
+
+    1. In the LinkSpot dashboard, click **Setup compatibility**
+    2. Wait for the test to complete
+    3. If the result is "Incompatible", try setting a manual CSS selector or contact support
+  </Step>
+
+  <Step title="Verify the Element Is Active">
+    Make sure the element you created is active and not disabled.
+
+    - For Product Sets: check that the set is toggled on in the product sets list
+    - For Pins/Annotations/Captions: verify they are saved and assigned to the correct product
+  </Step>
+
+  <Step title="Check Plan Limits">
+    If you've exceeded your plan's limits, elements over quota won't display on the storefront. Check your usage in the dashboard and upgrade your plan if needed.
+  </Step>
+
+  <Step title="Verify the Correct Theme">
+    LinkSpot stores compatibility data per theme. Make sure the theme selected in the LinkSpot dashboard matches the theme published on your storefront.
+
+    Use the theme selector in the dashboard to switch themes and check each one's compatibility status.
+  </Step>
+
+  <Step title="Try a Manual CSS Selector">
+    If the compatibility test fails, you can manually specify which elements on the page are product gallery images.
+
+    1. Click the menu icon next to the compatibility status
+    2. Select **Manually set CSS selector**
+    3. Enter the CSS selector that matches your product gallery items (e.g., `.product-gallery .gallery-item`)
+    4. Click **Save selector**
+  </Step>
+
+  <Step title="Contact Support">
+    If none of the above steps resolve the issue, contact LinkSpot support from the app (**Contact** in the sidebar) or email support@linkspotapp.com. Include:
+    - Your store URL
+    - Which theme you're using
+    - Which elements are not showing
+    - The collaborator request code (found in Shopify admin under Settings > Users and permissions > Collaborators)
+  </Step>
+</Steps>

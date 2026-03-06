@@ -1,0 +1,180 @@
+---
+title: Theme Integration
+description: Learn how LinkSpot integrates with your Shopify theme through the app embed block, theme compatibility, and metafields.
+---
+
+## Overview
+
+LinkSpot integrates with your Shopify storefront through a **theme app embed block**. This block loads automatically on product pages and renders interactive elements (Pins, Product Sets, Annotations, Captions) on your product gallery images. No theme code modifications are needed.
+
+## App Embed Block
+
+The app embed block is the core of LinkSpot's integration with your theme. It must be enabled for any elements to appear on your storefront.
+
+<Steps>
+  <Step title="Enable the Block" icon="toggle-right">
+    From the LinkSpot dashboard, click **Enable app embed** to open the theme editor with the LinkSpot block selected.
+  </Step>
+  <Step title="Save in Theme Editor" icon="save">
+    Ensure the block is toggled on, then click **Save** in the theme editor.
+  </Step>
+  <Step title="Confirm in LinkSpot" icon="check-circle">
+    Return to the LinkSpot dashboard and click **Confirm activation**. The status should change to "Enabled".
+  </Step>
+</Steps>
+
+<Callout kind="info">
+App embed blocks are deactivated by default after app installation. You must manually enable it in the theme editor. If you switch themes, you'll need to enable the block again on the new theme.
+</Callout>
+
+### What the App Embed Does
+
+When enabled, the app embed block:
+
+- Loads LinkSpot's scripts and styles on product pages
+- Reads element data from product metafields
+- Renders Pins, Product Sets, Annotations, and Captions on the product gallery images
+- Handles product card interactions (popup, new tab)
+
+## Theme Compatibility
+
+LinkSpot needs to identify your theme's product image gallery structure to place elements on the correct images. The compatibility test automates this detection.
+
+### Running the Test
+
+<Steps>
+  <Step title="Start Test" icon="play">
+    Click **Setup compatibility** in the LinkSpot dashboard. A new window opens with your storefront.
+  </Step>
+  <Step title="Automatic Detection" icon="search">
+    The test analyzes your theme's product page and detects the gallery image elements. This takes a few seconds.
+  </Step>
+  <Step title="Review Results" icon="check-circle">
+    A **Compatible** badge means your theme is supported and you're ready to go.
+  </Step>
+</Steps>
+
+### If Your Theme Is Incompatible
+
+If the test reports your theme as incompatible, elements cannot be placed on product images automatically. You have two options:
+
+<Tabs>
+  <Tab title="Manual CSS Selector" icon="code">
+    Set a custom CSS selector that matches the product gallery items in your theme. For example: `.product-gallery .gallery-item`.
+
+    1. Click **Manually set CSS selector** from the compatibility menu
+    2. Enter the CSS selector for your product gallery items
+    3. Click **Save selector**
+  </Tab>
+
+  <Tab title="Contact Support" icon="mail">
+    If you're unsure which CSS selector to use, contact LinkSpot support. We can help configure compatibility for your theme.
+  </Tab>
+</Tabs>
+
+<Callout kind="tip">
+If you change themes, you'll need to run the compatibility test again for the new theme.
+</Callout>
+
+### Multiple Themes
+
+LinkSpot stores compatibility data per theme. Use the theme selector in the dashboard to switch between themes and run compatibility tests for each one separately.
+
+## Data Storage
+
+LinkSpot stores element data in Shopify product metafields. These are managed automatically -- you don't need to edit them directly.
+
+| Metafield | Purpose |
+|-----------|---------|
+| `linkspot.pins_data` | Pin positions, styles, and linked products |
+| `linkspot.annotations_data` | Annotation positions, text, and styles |
+| `linkspot.captions_data` | Caption positions, text, and styles |
+| `linkspot.product_sets` | Product set assignments for the product |
+| `linkspot.app_settings` | App-wide display settings |
+| `linkspot.themes` | Theme compatibility configuration |
+
+<Expandable title="Product Set Metafield Assignment" default-open="false">
+
+  On the Scale plan, you can assign a product set to individual products using the `LinkSpot Product Set` metafield. This allows per-product control over which product set appears, in addition to the standard targeting rules (all products, collections, specific products).
+
+</Expandable>
+
+## Settings Reference
+
+LinkSpot settings are organized into sections accessible from **Settings** in the sidebar.
+
+### General
+
+| Setting | Options | Description |
+|---------|---------|-------------|
+| Product card click | Open in new tab, Open product popup | Behavior when a customer clicks a product card |
+| Show product vendor | On/Off | Include vendor name in product presentations |
+| Show currency code | On/Off | Show currency code (e.g., USD) in prices |
+| Corner style | Square, Soft, Rounded | Corner radius on buttons, cards, and popups |
+| Quick-view color scheme | Configurable | Color scheme for the product popup |
+| Elements z-index | Number (default: 11) | CSS z-index for elements to ensure they display above other page content |
+
+### Pins
+
+| Setting | Description |
+|---------|-------------|
+| Default pin style | Choose from 12 styles or a custom SVG |
+| Pin size | Adjust the size of pins on the gallery |
+| Hover animation | Animate pins on hover |
+| Constant animation | Keep pins in constant motion |
+| Interaction event | Click or Hover to open the card |
+
+### Annotations
+
+| Setting | Description |
+|---------|-------------|
+| Intro transition | Fade, Slide, or None |
+| Default color scheme | Background and text colors |
+
+### Captions
+
+| Setting | Description |
+|---------|-------------|
+| Default size | Small, Medium, Large, or Larger |
+| Default position | Top Left, Top Right, Bottom Left, or Bottom Right |
+| Default color scheme | Background and text colors |
+
+### Product Sets
+
+Product set settings are organized by layout:
+
+- **Button & Popup**: Button position, icon, color scheme, popup color scheme, cart behavior
+- **Card Carousel**: Card size, card width, content alignment, color scheme
+- **Links List**: Alignment, item size, color scheme
+- **Misc. settings**: Fallback behavior when targeted image position doesn't exist
+
+### Library
+
+The Library section in Settings lets you manage:
+
+- **Images** -- uploaded images for use in elements
+- **SVG Icons** -- custom SVG icons for pin styles
+- **Custom color schemes** -- reusable color scheme presets
+
+## Shopify Permissions
+
+LinkSpot requires the following Shopify access scopes:
+
+| Scope | Purpose |
+|-------|---------|
+| `read_products` | Read product data and images |
+| `write_products` | Write element data to product metafields |
+| `read_themes` | Detect theme compatibility |
+| `write_themes` | Enable the app embed block |
+| `write_files` | Upload images and SVG assets |
+
+## Next Steps
+
+<Columns cols={2}>
+  <Card title="Features" icon="layers" href="/features">
+    Detailed overview of all element types and plans.
+  </Card>
+  <Card title="Help Center" icon="help-circle" href="/help-center">
+    FAQs, troubleshooting, and step-by-step guides.
+  </Card>
+</Columns>

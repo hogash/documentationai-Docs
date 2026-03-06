@@ -31,7 +31,7 @@
             ]
           },
           {
-            "group": "Core Concepts",
+            "group": "Features",
             "icon": "layers",
             "pages": [
               {
@@ -42,25 +42,15 @@
             ]
           },
           {
-            "group": "Advanced",
+            "group": "Configuration",
             "icon": "package",
             "pages": [
               {
-                "title": "Integrations",
-                "path": "integrations",
+                "title": "Theme Integration",
+                "path": "theme-integration",
                 "icon": "plug"
               }
             ]
-          }
-        ]
-      },
-      {
-        "tab": "API Reference",
-        "icon": "code",
-        "groups": [
-          {
-            "group": "Endpoints",
-            "openapi": "api-reference/openapi.yaml"
           }
         ]
       },
@@ -79,8 +69,8 @@
             "expandable": false,
             "pages": [
               {
-                "title": "How to Add Link",
-                "path": "help-center/faq/how-to-add-link"
+                "title": "How to Create a Pin",
+                "path": "help-center/faq/how-to-create-a-pin"
               }
             ]
           },
@@ -90,8 +80,8 @@
             "expandable": false,
             "pages": [
               {
-                "title": "Link Not Working",
-                "path": "help-center/troubleshooting/link-not-working"
+                "title": "Elements Not Showing",
+                "path": "help-center/troubleshooting/elements-not-showing"
               }
             ]
           },
@@ -101,8 +91,8 @@
             "expandable": false,
             "pages": [
               {
-                "title": "Create Link Collection",
-                "path": "help-center/guides/create-link-collection"
+                "title": "Create a Product Set",
+                "path": "help-center/guides/create-a-product-set"
               }
             ]
           }

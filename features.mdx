@@ -1,162 +1,193 @@
 ---
-title: Core Features of LinkSpot
-description: Explore the essential tools and capabilities that make LinkSpot ideal for documentation management.
+title: Features
+description: Explore LinkSpot's four element types -- Pins, Product Sets, Annotations, and Captions -- and learn how to use each one.
 ---
 
 ## Overview
 
-LinkSpot provides a comprehensive suite of tools for managing your project documentation. You create, collaborate, track changes, organize content, and export it seamlessly. These features streamline your workflow from initial draft to final distribution.
+LinkSpot provides four types of interactive elements you can place on product gallery images. Each element type serves a different purpose, from cross-selling to feature callouts.
 
-<Callout kind="info">
-LinkSpot supports both visual editing and markdown-based workflows, making it accessible for all team members.
-</Callout>
-
-## Features at a Glance
-
-<Columns cols={3}>
-  <Card title="Page Creation" icon="file-plus" href="#creating-pages">
-    Build new documentation pages quickly with intuitive editors.
+<Columns cols={2}>
+  <Card title="Pins" icon="map-pin" href="#pins">
+    Clickable hotspots that link to other products.
   </Card>
-  <Card title="Version Control" icon="git-branch" href="#version-control">
-    Track changes and revert to previous versions effortlessly.
+  <Card title="Product Sets" icon="package" href="#product-sets">
+    Curated product groups with three layout options.
   </Card>
-  <Card title="Team Collaboration" icon="users" href="#collaboration">
-    Invite teammates and review changes in real-time.
+  <Card title="Annotations" icon="message-square" href="#annotations">
+    Text overlays for feature highlights.
   </Card>
-  <Card title="Search & Organization" icon="search" href="#search">
-    Find and structure content with powerful tools.
-  </Card>
-  <Card title="Export Options" icon="download" href="#export">
-    Generate PDFs, HTML, or markdown exports.
+  <Card title="Captions" icon="type" href="#captions">
+    Caption overlays with configurable position and size.
   </Card>
 </Columns>
 
-## Creating and Editing Documentation Pages
+## Pins
 
-Start by navigating to your workspace dashboard at `https://dashboard.linkspot.com`. Click the "New Page" button to begin.
+Pins are clickable hotspots placed on product images that link to other products. They are ideal for lifestyle photos, room scenes, or any image where multiple products are visible.
 
-<Tabs>
-  <Tab title="Visual Editor" icon="edit-3">
-    Drag and drop blocks for headings, images, and code snippets. No coding required.
-  </Tab>
-  <Tab title="Markdown Editor" icon="code">
-    Write in standard markdown with live preview.
+### Pin Styles
 
-````markdown
-# My Document Title
+LinkSpot offers 12 pin styles to match your store's aesthetic:
 
-## Section Heading
+| Category | Styles |
+|----------|--------|
+| Classic | 5 variants |
+| Geometric | Disk, Plus (2 variants), Dashed |
+| Decorative | Neon, Thumb, X |
+| Custom | Upload your own SVG icon |
 
-This is a **bold** paragraph with a [link](/path).
-
-```javascript
-console.log("Hello, LinkSpot!");
-```
-````
-  </Tab>
-</Tabs>
-
-<Steps>
-  <Step title="Create Page" icon="plus">
-    Select your workspace and click "New Page".
-  </Step>
-  <Step title="Edit Content">
-    Choose visual or markdown mode and add your content.
-  </Step>
-  <Step title="Preview & Publish" icon="eye">
-    Preview changes then hit "Publish".
-  </Step>
-</Steps>
-
-## Version Control and History Tracking
-
-LinkSpot automatically saves every change, creating a full version history. Access it via the page menu.
-
-<Expandable title="View Change History" default-open="true">
-  Click the history icon to see diffs between versions. Revert by selecting a previous snapshot.
-
-  ```mermaid
-  graph TD
-      A[Draft v1] --> B[Edit v2]
-      B --> C[Review v3]
-      C --> D[Published v4]
-      D --> E[Revert to v2]
-  ```
-</Expandable>
-
-## Collaboration Tools for Teams
-
-Invite team members by email or link. They can comment, suggest edits, and @mention others.
-
-<Tabs>
-  <Tab title="Invite Collaborators" icon="user-plus">
-    Go to page settings > Sharing > Add members.
-  </Tab>
-  <Tab title="Review Changes">
-    Use inline comments and approval workflows.
-  </Tab>
-</Tabs>
-
-<Callout kind="tip">
-Enable real-time cursors to see who is editing simultaneously.
+<Callout kind="info">
+All 12 pin styles are available on Growth and Scale plans. Free and Starter plans include a subset of styles.
 </Callout>
 
-## Search and Organization Features
+### Pin Interaction
 
-Powerful full-text search indexes all pages. Organize with tags, folders, and custom hierarchies.
+Configure how customers interact with pins:
 
-| Feature | Description | Example Use |
-|---------|-------------|-------------|
-| Global Search | Finds across all pages | Type "API endpoint" |
-| Tags | Categorize content | #feature #bugfix |
-| Folders | Nested organization | docs/guides/ |
-| Filters | Narrow by date/author | Last 7 days |
+| Setting | Options | Description |
+|---------|---------|-------------|
+| Interaction event | Click, Hover | Choose the mouse event that opens the product card |
+| Hover animation | On/Off | Animate the pin when hovered |
+| Constant animation | On/Off | Keep pins in constant motion (e.g., pulsating) to attract attention |
 
-## Export Options for Docs
+### Pin Limits
 
-Export single pages or entire sites in multiple formats.
+Each plan specifies how many products can have pins and how many pins can be placed per image. See [Plans](#plans) below.
 
-<CodeGroup tabs="PDF,HTML,Markdown">
-````bash
-# CLI export example
-linkspot export --page=my-page --format=pdf --output=./docs.pdf
-````
-````html
-<!-- HTML structure -->
-<!DOCTYPE html>
-<html>
-<head><title>My Page</title></head>
-<body><!-- Content --></body>
-</html>
-````
-````markdown
-# Exported Page
+## Product Sets
 
-Content from LinkSpot.
-````
-</CodeGroup>
+Product Sets let you display curated groups of products on a product image. They are the primary tool for cross-selling and upselling.
 
-<Steps>
-  <Step title="Select Export" icon="download">
-    Open page menu > Export.
-  </Step>
-  <Step title="Choose Format">
-    Pick PDF, HTML, or Markdown.
-  </Step>
-  <Step title="Download" icon="save">
-    Generate and save the file.
-  </Step>
-</Steps>
+### Layouts
+
+<Tabs>
+  <Tab title="Button & Popup" icon="mouse-pointer">
+    A button is placed on the product image. When clicked, it opens a popup displaying the selected products.
+
+    **Configuration options:**
+    - Button position (Top Left, Top Right, Bottom Left, Bottom Right)
+    - Button icon and color scheme
+    - Popup color scheme
+    - Cart behavior: "Add selected with one button" (best for outfits/bundles) or "Add each product separately" (best for recommendations)
+  </Tab>
+
+  <Tab title="Card Carousel" icon="columns">
+    A horizontal carousel of product cards displayed on or near the product image.
+
+    **Configuration options:**
+    - Card size (Small, Medium, Large)
+    - Card width
+    - Content vertical alignment (Spaced, Centered)
+    - Color scheme
+  </Tab>
+
+  <Tab title="Links List" icon="list">
+    A list of product links displayed on the product image.
+
+    **Configuration options:**
+    - Alignment (Left, Right)
+    - Item size (Small, Medium)
+    - Color scheme
+  </Tab>
+</Tabs>
+
+### Targeting
+
+Product Sets can be targeted to specific products in several ways:
+
+- **All products** -- the set appears on every product page
+- **Specific collections** -- the set appears on products in selected collections
+- **Specific products** -- the set appears only on hand-picked products
+- **Product metafield** (Scale plan) -- assign a product set via the `LinkSpot Product Set` metafield on individual products
+
+### Product Selection
+
+Choose which products appear inside a product set:
+
+- **Manual selection** -- hand-pick products from your catalog
+- **Automatic** (Starter plan and above) -- use Shopify's Search & Discovery recommendations to automatically populate complementary or related products
+
+### Image Placement
+
+Product Sets can be targeted to a specific image position in the product gallery (e.g., the 3rd image). If the product doesn't have that many images, you can configure the set to either hide or fall back to the last available image.
+
+## Annotations
+
+Annotations are text overlays placed on product images to highlight features, materials, dimensions, or other details.
+
+### Configuration
+
+| Setting | Options | Description |
+|---------|---------|-------------|
+| Intro transition | Fade, Slide, None | Animation when the annotation first appears |
+| Color scheme | Customizable | Background and text colors |
+| Position | Click to place | Position by clicking on the product image |
+
+Annotations are positioned freely on the image -- click where you want the annotation to appear and enter your text.
+
+## Captions
+
+Captions are text overlays that display in a corner of the product image.
+
+### Configuration
+
+| Setting | Options | Description |
+|---------|---------|-------------|
+| Size | Small, Medium, Large, Larger | Text and padding size |
+| Position | Top Left, Top Right, Bottom Left, Bottom Right | Corner placement |
+| Color scheme | Customizable | Background and text colors |
+
+## Plans
+
+LinkSpot offers four plans. Feature limits scale with each tier.
+
+| Feature | Free | Starter | Growth | Scale |
+|---------|------|---------|--------|-------|
+| Product Sets | Limited | More | More | Most |
+| Automatic product sets | -- | Yes | Yes | Yes |
+| Advanced targeting | -- | -- | Yes | Yes |
+| Scalable targeting & metafield assignment | -- | -- | -- | Yes |
+| Products with Pins | Limited | More | More | Most |
+| Products with Annotations | Limited | More | More | Most |
+| Products with Captions | Limited | More | More | Most |
+| All 12 pin styles | -- | -- | Yes | Yes |
+| Multi-language support | -- | -- | Yes | Yes |
+| Theme compatibility setup | Yes | Yes | Yes | Yes |
+| Email support | Yes | Yes | Yes | Yes |
+
+<Callout kind="info">
+The Free plan includes LinkSpot branding on elements. Paid plans remove the branding.
+</Callout>
+
+<Expandable title="Plan Feature Details" default-open="false">
+
+  - **Automatic product sets**: Populate product sets automatically using Shopify's related or complementary product recommendations.
+  - **Advanced targeting**: Advanced product set assignment, targeting, and gallery placement options.
+  - **Scalable targeting**: Scalable product set assignment including per-product metafield-based assignment.
+  - **Multi-language**: Support for multi-language storefronts.
+
+</Expandable>
+
+## General Settings
+
+These settings apply across all element types:
+
+| Setting | Options | Description |
+|---------|---------|-------------|
+| Product card click behavior | Open in new tab, Open product popup | What happens when a customer clicks a product card |
+| Show product vendor | On/Off | Display the vendor name in product presentations |
+| Show currency code | On/Off | Show currency code (e.g., USD) in prices |
+| Corner style | Square, Soft, Rounded | Controls corner radius on buttons, cards, and popups |
+| Color scheme | Light, Dark, Auto | Product quick-view popup color scheme |
 
 ## Next Steps
 
-Explore these features hands-on in your LinkSpot workspace. For API integrations, check endpoints like `https://api.example.com/v1/pages`.
-
 <Columns cols={2}>
-  <Card title="Quickstart Guide" icon="book-open" href="/quickstart">
-    Set up your first project.
+  <Card title="Theme Integration" icon="plug" href="/theme-integration">
+    Learn how LinkSpot integrates with your Shopify theme.
   </Card>
-  <Card title="API Reference" icon="api" href="/authentication">
-    Programmatic access.
+  <Card title="Help Center" icon="help-circle" href="/help-center">
+    Get answers to common questions and troubleshooting help.
   </Card>
 </Columns>

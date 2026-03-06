@@ -1,172 +1,152 @@
 ---
 title: Getting Started with LinkSpot
-description: Set up your LinkSpot account and create your first documentation space in just a few minutes.
+description: Install LinkSpot, enable the app embed, run the compatibility test, and create your first interactive element on a product image.
 ---
 
 ## Prerequisites
 
 <Callout kind="info" title="Before You Begin">
-Ensure you have:
-- A valid email address
-- Team member emails ready for invitations
-- Existing docs (Markdown, Google Docs, or GitHub repo) if importing
+You need:
+- A Shopify store with an active plan
+- A published theme (or a trial/development theme)
+- At least one product with images in your catalog
 </Callout>
 
-LinkSpot makes it easy to set up your documentation workspace. Follow these steps to create your account, invite collaborators, build your first page, explore the dashboard, and import content.
-
-## Step 1: Create Your Account
+## Step 1: Install LinkSpot
 
 <Steps>
-  <Step title="Sign Up" icon="user-plus">
-    Visit `https://app.linkspot.com/signup` and enter your email and password.
-
-    Choose your workspace name, such as "My Project Docs".
-
-    Verify your email by clicking the link sent to your inbox.
+  <Step title="Find LinkSpot" icon="search">
+    Go to the [Shopify App Store](https://apps.shopify.com) and search for "LinkSpot", or install it directly from the app listing.
   </Step>
 
-  <Step title="Complete Onboarding" icon="check-circle">
-    Select your team size and preferred doc formats (Markdown, rich text).
+  <Step title="Approve Permissions" icon="shield">
+    LinkSpot requires access to read your products and themes, and write product metafields. Approve the permissions when prompted during installation.
+  </Step>
 
-    Skip advanced settings for now—you can configure them later.
+  <Step title="Open the App" icon="external-link">
+    After installation, open LinkSpot from your Shopify admin sidebar under **Apps > LinkSpot**.
   </Step>
 </Steps>
 
-## Step 2: Invite Team Members
+## Step 2: Enable the App Embed Block
+
+The app embed block allows LinkSpot to load on your storefront. Without it, no elements will appear on your product pages.
 
 <Steps>
-  <Step title="Access Invites" icon="users">
-    From the dashboard, click the `Team` icon in the sidebar.
+  <Step title="Open Theme Editor" icon="edit-3">
+    From the LinkSpot dashboard, click **Enable app embed**. This opens your Shopify theme editor with the LinkSpot app embed block selected.
   </Step>
 
-  <Step title="Send Invites" icon="mail">
-    Enter email addresses separated by commas: `team@example.com, collab@company.com`.
-
-    Set roles: `Editor` for full access or `Viewer` for read-only.
+  <Step title="Save the Theme" icon="save">
+    In the theme editor, make sure the LinkSpot app embed block is toggled on, then click **Save**.
   </Step>
 
-  <Step title="Manage Permissions" icon="shield">
-    Team members receive an invite link—approve pending requests from your `Team` settings.
+  <Step title="Confirm Activation" icon="check-circle">
+    Return to LinkSpot and click **Confirm activation**. The dashboard should now show the app embed as "Enabled".
   </Step>
 </Steps>
 
-## Build Your First Documentation Page
+<Callout kind="tip">
+App embed blocks are deactivated by default after installation. You must manually enable it in the theme editor for LinkSpot to work.
+</Callout>
 
-Start creating content immediately.
+## Step 3: Run the Compatibility Test
+
+The compatibility test detects your theme's product image gallery structure so LinkSpot can place elements on the correct images.
+
+<Steps>
+  <Step title="Start the Test" icon="play">
+    In the LinkSpot dashboard, find the compatibility section and click **Setup compatibility**. The test opens your storefront in a new window and analyzes the product gallery.
+  </Step>
+
+  <Step title="Wait for Results" icon="clock">
+    The test runs automatically and takes a few seconds. Do not close the window until it completes.
+  </Step>
+
+  <Step title="Review Results" icon="check-circle">
+    If your theme is compatible, you'll see a "Compatible" badge and you're ready to continue.
+
+If the test reports your theme as incompatible, you have two options:
+- **Set a manual CSS selector** for the product gallery items
+- **Contact support** for help with your specific theme
+  </Step>
+</Steps>
+
+## Step 4: Create Your First Element
+
+With the app embed enabled and compatibility confirmed, create your first interactive element.
 
 <Tabs>
-  <Tab title="Rich Text Editor" icon="edit-3">
-    Click `New Page` in the dashboard.
-
-    Use the visual editor for headings, lists, and embeds.
-
-    ```
-    ## Welcome to LinkSpot
-
-    This is your first page.
-
-    - Add lists
-    - Embed images
-    ```
+  <Tab title="Pin" icon="map-pin">
+    1. Go to **Pins** in the sidebar
+    2. Select a product from your catalog
+    3. Click on the product image where you want to place the pin
+    4. Link the pin to another product
+    5. Choose a pin style and save
   </Tab>
 
-  <Tab title="Markdown Mode" icon="code">
-    Switch to Markdown view for faster editing.
+  <Tab title="Product Set" icon="package">
+    1. Go to **Product Sets** in the sidebar
+    2. Click **Create product set**
+    3. Choose a layout: Button & Popup, Card Carousel, or Links List
+    4. Select which products to target (all, specific collections, or individual products)
+    5. Add the products you want to display in the set
+    6. Save the product set
+  </Tab>
 
-````markdown
-## Welcome to LinkSpot
+  <Tab title="Annotation" icon="message-square">
+    1. Go to **Annotations** in the sidebar
+    2. Select a product from your catalog
+    3. Click on the product image where you want to place the annotation
+    4. Enter your annotation text
+    5. Choose a color scheme and save
+  </Tab>
 
-This is your first page.
-
-- Add lists
-- Embed images
-````
-
+  <Tab title="Caption" icon="type">
+    1. Go to **Captions** in the sidebar
+    2. Select a product from your catalog
+    3. Click on the product image where you want to place the caption
+    4. Enter your caption text
+    5. Choose a size, position, and save
   </Tab>
 </Tabs>
 
-<Callout kind="tip">
-Save frequently—LinkSpot auto-saves every 30 seconds.
-</Callout>
+## Dashboard Overview
 
-## Navigate the Dashboard
+After setup, the LinkSpot dashboard shows:
 
-<Columns cols={3}>
-  <Card title="Spaces" icon="folder" href="#">
-    Manage multiple documentation spaces.
+<Columns cols={2}>
+  <Card title="Element Counts" icon="bar-chart-3" href="#">
+    See how many Product Sets, Pins, Annotations, and Captions you've created, and how many products have elements assigned.
   </Card>
 
-  <Card title="Search" icon="search" href="#">
-    Full-text search across all pages.
+  <Card title="Plan & Usage" icon="layers" href="#">
+    View your current plan, usage against limits, and upgrade options.
   </Card>
 
-  <Card title="Analytics" icon="bar-chart-3" href="#">
-    Track page views and edits.
+  <Card title="Setup Guide" icon="rocket" href="#">
+    A collapsible checklist that tracks your progress through the app embed, compatibility, and first element steps.
+  </Card>
+
+  <Card title="Integration Status" icon="toggle-right" href="#">
+    At-a-glance status of the app embed block and theme compatibility for your selected theme.
   </Card>
 </Columns>
-
-Key areas include:
-- **Sidebar**: Access spaces, pages, and settings.
-- **Top Bar**: Search and user profile.
-- **Page List**: Hierarchical view of your docs.
-
-## Import Existing Documentation
-
-Bring in your current docs seamlessly.
-
-<CodeGroup tabs="Markdown,Google Docs,GitHub">
-````markdown
-```bash
-# Upload Markdown files directly
-curl -X POST https://api.linkspot.com/v1/import/markdown \
-  -H "Authorization: Bearer YOUR_API_KEY" \
-  -F "file=@docs.md"
-```
-````
-
-````markdown
-```javascript
-// Google Docs integration
-import { linkspot } from 'linkspot-sdk';
-
-const importer = linkspot.import();
-await importer.fromGoogleDocs({
-  docId: '1abc123',
-  spaceId: 'your-space-id'
-});
-```
-````
-
-````markdown
-```bash
-# Sync from GitHub repo
-# In dashboard: Integrations > GitHub > Connect repo
-# Select branch: main
-# Import path: /docs/*
-```
-````
-</CodeGroup>
 
 ## Next Steps
 
-<Expandable title="Advanced Features" default-open="false">
-Explore these after setup:
+<Card title="Features" icon="layers" href="/features" horizontal>
 
-- Custom domains for public docs
-- Version history and rollback
-- Webhooks for integrations
-</Expandable>
+  Learn about Pins, Product Sets, Annotations, and Captions in detail.
 
-<Columns cols={2}>
-  <Card title="Authentication" icon="lock" href="/authentication">
-    Secure your workspace with SSO.
-  </Card>
+</Card>
 
-  <Card title="Customization" icon="settings" href="/configuration">
-    Tailor LinkSpot to your workflow.
-  </Card>
-</Columns>
+<Card title="Theme Integration" icon="plug" href="/theme-integration" horizontal>
+
+  Configure settings, understand theme compatibility, and learn how LinkSpot works with your theme.
+
+</Card>
 
 <Callout kind="success">
-Congratulations! Your LinkSpot workspace is ready. Start building and share your first page with your team.
+Your LinkSpot setup is complete. Start creating interactive elements on your product images.
 </Callout>
