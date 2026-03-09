@@ -36,7 +36,7 @@
             ]
           },
           {
-            "group": "Features",
+            "group": "Product sets",
             "icon": "layers",
             "pages": [
               {
@@ -47,7 +47,7 @@
             ]
           },
           {
-            "group": "Configuration",
+            "group": "Settings",
             "icon": "package",
             "pages": []
           },
