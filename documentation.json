@@ -27,6 +27,11 @@
                 "title": "Quickstart",
                 "path": "quickstart",
                 "icon": "zap"
+              },
+              {
+                "title": "Theme Integration",
+                "path": "theme-integration",
+                "icon": "plug"
               }
             ]
           },
@@ -44,13 +49,7 @@
           {
             "group": "Configuration",
             "icon": "package",
-            "pages": [
-              {
-                "title": "Theme Integration",
-                "path": "theme-integration",
-                "icon": "plug"
-              }
-            ]
+            "pages": []
           },
           {
             "group": "Legal",

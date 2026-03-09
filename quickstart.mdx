@@ -1,29 +1,33 @@
 ---
 title: Getting Started with LinkSpot
-description: Install LinkSpot, enable the app embed, run the compatibility test, and create your first interactive element on a product image.
+description: >-
+  Install LinkSpot, enable the app embed, run the compatibility test, and
+  preview the storefront to ensure it works.
 ---
-
 ## Prerequisites
 
-<Callout kind="info" title="Before You Begin">
-You need:
-- A Shopify store with an active plan
-- A published theme (or a trial/development theme)
-- At least one product with images in your catalog
+<Callout kind="info" collapsed="false">
+  You need:
+
+  - A Shopify store with an active plan
+
+  - A published theme (or a trial/development theme)
+
+  - At least one product with images in your catalog
 </Callout>
 
 ## Step 1: Install LinkSpot
 
 <Steps>
-  <Step title="Find LinkSpot" icon="search">
+  <Step title="Find LinkSpot" icon="search" title-type="p">
     Go to the [Shopify App Store](https://apps.shopify.com) and search for "LinkSpot", or install it directly from the app listing.
   </Step>
 
-  <Step title="Approve Permissions" icon="shield">
+  <Step title="Approve Permissions" icon="shield" title-type="p">
     LinkSpot requires access to read your products and themes, and write product metafields. Approve the permissions when prompted during installation.
   </Step>
 
-  <Step title="Open the App" icon="external-link">
+  <Step title="Open the App" icon="external-link" title-type="p">
     After installation, open LinkSpot from your Shopify admin sidebar under **Apps > LinkSpot**.
   </Step>
 </Steps>
@@ -33,21 +37,21 @@ You need:
 The app embed block allows LinkSpot to load on your storefront. Without it, no elements will appear on your product pages.
 
 <Steps>
-  <Step title="Open Theme Editor" icon="edit-3">
+  <Step title="Open Theme Editor" icon="edit-3" title-type="p">
     From the LinkSpot dashboard, click **Enable app embed**. This opens your Shopify theme editor with the LinkSpot app embed block selected.
   </Step>
 
-  <Step title="Save the Theme" icon="save">
+  <Step title="Save the Theme" icon="save" title-type="p">
     In the theme editor, make sure the LinkSpot app embed block is toggled on, then click **Save**.
   </Step>
 
-  <Step title="Confirm Activation" icon="check-circle">
+  <Step title="Confirm Activation" icon="check-circle" title-type="p">
     Return to LinkSpot and click **Confirm activation**. The dashboard should now show the app embed as "Enabled".
   </Step>
 </Steps>
 
-<Callout kind="tip">
-App embed blocks are deactivated by default after installation. You must manually enable it in the theme editor for LinkSpot to work.
+<Callout kind="tip" collapsed="false">
+  App embed blocks are deactivated by default after installation. You must manually enable it in the theme editor for LinkSpot to work.
 </Callout>
 
 ## Step 3: Run the Compatibility Test
@@ -55,19 +59,21 @@ App embed blocks are deactivated by default after installation. You must manuall
 The compatibility test detects your theme's product image gallery structure so LinkSpot can place elements on the correct images.
 
 <Steps>
-  <Step title="Start the Test" icon="play">
+  <Step title="Start the Test" icon="play" title-type="p">
     In the LinkSpot dashboard, find the compatibility section and click **Setup compatibility**. The test opens your storefront in a new window and analyzes the product gallery.
   </Step>
 
-  <Step title="Wait for Results" icon="clock">
+  <Step title="Wait for Results" icon="clock" title-type="p">
     The test runs automatically and takes a few seconds. Do not close the window until it completes.
   </Step>
 
-  <Step title="Review Results" icon="check-circle">
+  <Step title="Review Results" icon="check-circle" title-type="p">
     If your theme is compatible, you'll see a "Compatible" badge and you're ready to continue.
 
     If the test reports your theme as incompatible, you have two options:
+
     - **Set a manual CSS selector** for the product gallery items
+
     - **Contact support** for help with your specific theme
   </Step>
 </Steps>
@@ -79,34 +85,51 @@ With the app embed enabled and compatibility confirmed, create your first intera
 <Tabs>
   <Tab title="Pin" icon="map-pin">
     1. Go to **Pins** in the sidebar
+
     2. Select a product from your catalog
+
     3. Click on the product image where you want to place the pin
+
     4. Link the pin to another product
+
     5. Choose a pin style and save
   </Tab>
 
   <Tab title="Product Set" icon="package">
     1. Go to **Product Sets** in the sidebar
+
     2. Click **Create product set**
+
     3. Choose a layout: Button & Popup, Card Carousel, or Links List
+
     4. Select which products to target (all, specific collections, or individual products)
+
     5. Add the products you want to display in the set
+
     6. Save the product set
   </Tab>
 
   <Tab title="Annotation" icon="message-square">
     1. Go to **Annotations** in the sidebar
+
     2. Select a product from your catalog
+
     3. Click on the product image where you want to place the annotation
+
     4. Enter your annotation text
+
     5. Choose a color scheme and save
   </Tab>
 
   <Tab title="Caption" icon="type">
     1. Go to **Captions** in the sidebar
+
     2. Select a product from your catalog
+
     3. Click on the product image where you want to place the caption
+
     4. Enter your caption text
+
     5. Choose a size, position, and save
   </Tab>
 </Tabs>
@@ -115,38 +138,35 @@ With the app embed enabled and compatibility confirmed, create your first intera
 
 After setup, the LinkSpot dashboard shows:
 
-<Columns cols={2}>
-  <Card title="Element Counts" icon="bar-chart-3" href="#">
+<Columns cols="2">
+  <Card title="Element Counts" href="#" icon="bar-chart-3" horizontal="false">
     See how many Product Sets, Pins, Annotations, and Captions you've created, and how many products have elements assigned.
   </Card>
 
-  <Card title="Plan & Usage" icon="layers" href="#">
+  <Card title="Plan & Usage" href="#" icon="layers" horizontal="false">
     View your current plan, usage against limits, and upgrade options.
   </Card>
 
-  <Card title="Setup Guide" icon="rocket" href="#">
+  <Card title="Setup Guide" href="#" icon="rocket" horizontal="false">
     A collapsible checklist that tracks your progress through the app embed, compatibility, and first element steps.
   </Card>
 
-  <Card title="Integration Status" icon="toggle-right" href="#">
+  <Card title="Integration Status" href="#" icon="toggle-right" horizontal="false">
     At-a-glance status of the app embed block and theme compatibility for your selected theme.
   </Card>
 </Columns>
 
 ## Next Steps
 
-<Card title="Features" icon="layers" href="/features" horizontal>
-
+<Card title="Features" href="/features" icon="layers">
   Learn about Pins, Product Sets, Annotations, and Captions in detail.
-
 </Card>
 
-<Card title="Theme Integration" icon="plug" href="/theme-integration" horizontal>
-
+<Card title="Theme Integration" href="/theme-integration" icon="plug">
   Configure settings, understand theme compatibility, and learn how LinkSpot works with your theme.
-
 </Card>
 
-<Callout kind="success">
-Your LinkSpot setup is complete. Start creating interactive elements on your product images.
+<Callout kind="success" collapsed="false">
+  Your LinkSpot setup is complete. Start creating interactive elements on your product images.
 </Callout>
+

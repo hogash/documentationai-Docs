@@ -92,82 +92,11 @@ LinkSpot stores compatibility data per theme. Use the theme selector in the dash
 
 ## Data Storage
 
-LinkSpot stores element data in Shopify product metafields. These are managed automatically -- you don't need to edit them directly.
-
-| Metafield                   | Purpose                                    |
-| --------------------------- | ------------------------------------------ |
-| `linkspot.pins_data`        | Pin positions, styles, and linked products |
-| `linkspot.annotations_data` | Annotation positions, text, and styles     |
-| `linkspot.captions_data`    | Caption positions, text, and styles        |
-| `linkspot.product_sets`     | Product set assignments for the product    |
-| `linkspot.app_settings`     | App-wide display settings                  |
-| `linkspot.themes`           | Theme compatibility configuration          |
+LinkSpot stores element data in Shopify product metafields. These are managed automatically and you don't need to edit them directly.
 
 <Expandable title="Product Set Metafield Assignment" default-open="false">
   On the Scale plan, you can assign a product set to individual products using the `LinkSpot Product Set` metafield. This allows per-product control over which product set appears, in addition to the standard targeting rules (all products, collections, specific products).
 </Expandable>
-
-## Settings Reference
-
-LinkSpot settings are organized into sections accessible from **Settings** in the sidebar.
-
-### General
-
-| Setting                 | Options                             | Description                                                              |
-| ----------------------- | ----------------------------------- | ------------------------------------------------------------------------ |
-| Product card click      | Open in new tab, Open product popup | Behavior when a customer clicks a product card                           |
-| Show product vendor     | On/Off                              | Include vendor name in product presentations                             |
-| Show currency code      | On/Off                              | Show currency code (e.g., USD) in prices                                 |
-| Corner style            | Square, Soft, Rounded               | Corner radius on buttons, cards, and popups                              |
-| Quick-view color scheme | Configurable                        | Color scheme for the product popup                                       |
-| Elements z-index        | Number (default: 11)                | CSS z-index for elements to ensure they display above other page content |
-
-### Pins
-
-| Setting            | Description                            |
-| ------------------ | -------------------------------------- |
-| Default pin style  | Choose from 12 styles or a custom SVG  |
-| Pin size           | Adjust the size of pins on the gallery |
-| Hover animation    | Animate pins on hover                  |
-| Constant animation | Keep pins in constant motion           |
-| Interaction event  | Click or Hover to open the card        |
-
-### Annotations
-
-| Setting              | Description                |
-| -------------------- | -------------------------- |
-| Intro transition     | Fade, Slide, or None       |
-| Default color scheme | Background and text colors |
-
-### Captions
-
-| Setting              | Description                                       |
-| -------------------- | ------------------------------------------------- |
-| Default size         | Small, Medium, Large, or Larger                   |
-| Default position     | Top Left, Top Right, Bottom Left, or Bottom Right |
-| Default color scheme | Background and text colors                        |
-
-### Product Sets
-
-Product set settings are organized by layout:
-
-- **Button & Popup**: Button position, icon, color scheme, popup color scheme, cart behavior
-
-- **Card Carousel**: Card size, card width, content alignment, color scheme
-
-- **Links List**: Alignment, item size, color scheme
-
-- **Misc. settings**: Fallback behavior when targeted image position doesn't exist
-
-### Library
-
-The Library section in Settings lets you manage:
-
-- **Images** -- uploaded images for use in elements
-
-- **SVG Icons** -- custom SVG icons for pin styles
-
-- **Custom color schemes** -- reusable color scheme presets
 
 ## Shopify Permissions
 
